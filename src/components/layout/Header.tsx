@@ -129,17 +129,18 @@ export const Header = ({
               setIsSignModalOpen(true);
             }}
             variant="secondary"
+            className="px-1.5 md:pl-4 md:pr-1.5 gap-0 md:gap-3"
           >
             {isSignedIn ? (
               <>
-                <span className="max-w-[80px] md:max-w-[120px] truncate text-rose-300 font-semibold">{userEmail.split('@')[0]}</span>
+                <span className="hidden md:inline max-w-[80px] md:max-w-[120px] truncate text-rose-300 font-semibold">{userEmail.split('@')[0]}</span>
                 <div className="w-7 h-7 md:w-8 md:h-8 rounded-full bg-rose-500/20 text-rose-400 border border-rose-500/30 flex items-center justify-center">
                   <Cpu size={14} className="animate-pulse" />
                 </div>
               </>
             ) : (
               <>
-                <span className="font-sans tracking-wider text-xs md:text-sm text-neutral-300">S'identifier</span>
+                <span className="hidden md:inline font-sans tracking-wider text-xs md:text-sm text-neutral-300">S'identifier</span>
                 <div className="w-7 h-7 md:w-8 md:h-8 rounded-full bg-[#ffffff15] text-white flex items-center justify-center group-hover:bg-[#ffffff20] transition-colors border border-white/10 shadow-inner">
                   <User size={13} className="md:size-4" />
                 </div>
