@@ -7,12 +7,14 @@ interface HeroSectionProps {
   scrollY: number;
   setIsGetStartedOpen: (val: boolean) => void;
   setIsConnectingOpen: (val: boolean) => void;
+  onNavigate?: (id: string) => void;
 }
 
 export const HeroSection = ({
   scrollY,
   setIsGetStartedOpen,
-  setIsConnectingOpen
+  setIsConnectingOpen,
+  onNavigate
 }: HeroSectionProps) => {
   return (
     <div 
@@ -64,7 +66,7 @@ export const HeroSection = ({
               <Button 
                 id="get-started-cta"
                 onClick={() => {
-                  setIsGetStartedOpen(true);
+                  onNavigate?.("spirit-supremacy");
                 }}
                 variant="primary"
                 animateProps={{

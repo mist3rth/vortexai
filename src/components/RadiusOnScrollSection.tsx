@@ -39,7 +39,7 @@ const bionicSpecs = [
 
 export function RadiusOnScrollSection() {
   return (
-    <section className="relative w-full bg-[#030305] pt-24 pb-32">
+    <section id="spirit-supremacy" className="relative w-full bg-[#030305] pt-24 pb-32">
       {/* Header - Scrolle naturellement pour laisser la place */}
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 mb-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start pb-16 border-b border-white/10 relative">

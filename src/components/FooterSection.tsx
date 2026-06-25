@@ -5,9 +5,10 @@ interface FooterSectionProps {
   onOpenPrivacy: () => void;
   onOpenSomaticLaws: () => void;
   onNavigate?: (id: string) => void;
+  onGoHome?: () => void;
 }
 
-export default function FooterSection({ onOpenPrivacy, onOpenSomaticLaws, onNavigate }: FooterSectionProps) {
+export default function FooterSection({ onOpenPrivacy, onOpenSomaticLaws, onNavigate, onGoHome }: FooterSectionProps) {
   const handleLinkClick = (id: string) => {
     if (onNavigate) {
       onNavigate(id);
@@ -34,7 +35,7 @@ export default function FooterSection({ onOpenPrivacy, onOpenSomaticLaws, onNavi
             <div 
               className="flex items-center gap-3 cursor-pointer group"
               onClick={() => {
-                window.scrollTo({ top: 0, behavior: "smooth" });
+                onGoHome?.();
               }}
             >
               {/* Spinning gear-like emblem */}

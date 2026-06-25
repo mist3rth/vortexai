@@ -157,6 +157,27 @@ export default function App() {
     }
   };
 
+  const handleGoHome = () => {
+    setActiveView("home");
+    setIsMenuOpen(false);
+    setIsConnectingOpen(false);
+    setIsSignModalOpen(false);
+    
+    // Smooth scroll to top of window and scrollable divs
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    const rootEl = document.getElementById("root");
+    if (rootEl) {
+      rootEl.scrollTop = 0;
+      rootEl.scrollTo?.({ top: 0, behavior: "smooth" });
+    }
+    if (containerRef.current) {
+      containerRef.current.scrollTop = 0;
+      containerRef.current.scrollTo?.({ top: 0, behavior: "smooth" });
+    }
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  };
+
   return (
     <div ref={containerRef} className="relative w-full min-h-screen font-sans flex flex-col select-none bg-[#050508] scroll-smooth overflow-x-clip">
       
@@ -193,13 +214,7 @@ export default function App() {
           }
         }}
         onNavigate={handleNavigate}
-        onGoHome={() => {
-          setActiveView("home");
-          setIsMenuOpen(false);
-          setIsConnectingOpen(false);
-          setIsSignModalOpen(false);
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }}
+        onGoHome={handleGoHome}
       />
 
       {activeView === "home" ? (
@@ -209,6 +224,7 @@ export default function App() {
             scrollY={scrollY}
             setIsGetStartedOpen={setIsGetStartedOpen}
             setIsConnectingOpen={setIsConnectingOpen}
+            onNavigate={handleNavigate}
           />
 
           {/* DYNAMIC SCROLLING SECTIONS */}
@@ -274,6 +290,7 @@ export default function App() {
                 onOpenPrivacy={() => setActiveView("privacy")}
                 onOpenSomaticLaws={() => setActiveView("somatic-laws")}
                 onNavigate={handleNavigate}
+                onGoHome={handleGoHome}
               />
             </ErrorBoundary>
 
@@ -289,6 +306,7 @@ export default function App() {
               onOpenPrivacy={() => setActiveView("privacy")}
               onOpenSomaticLaws={() => setActiveView("somatic-laws")}
               onNavigate={handleNavigate}
+              onGoHome={handleGoHome}
             />
           </ErrorBoundary>
         </div>
@@ -302,6 +320,7 @@ export default function App() {
               onOpenPrivacy={() => setActiveView("privacy")}
               onOpenSomaticLaws={() => setActiveView("somatic-laws")}
               onNavigate={handleNavigate}
+              onGoHome={handleGoHome}
             />
           </ErrorBoundary>
         </div>
