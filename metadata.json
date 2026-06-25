@@ -1,0 +1,6 @@
+{
+  "name": "APEXAi Hero Section",
+  "description": "A futuristic high-fidelity hero section for APEXAi ChatLLM, featuring glassmorphism layout, responsive navigation, and interactive custom states.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
