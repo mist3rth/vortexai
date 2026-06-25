@@ -38,6 +38,7 @@ export const MobileMenuDrawer = ({
                 <span className="font-mono text-xs tracking-widest text-[#a1a1aa] uppercase font-bold">Menu de Navigation</span>
                 <button 
                   onClick={() => { onClose(); }}
+                  aria-label="Fermer le menu"
                   className="w-9 h-9 rounded-full bg-white/5 hover:bg-rose-500/20 text-neutral-300 hover:text-white border border-white/10 hover:border-rose-500/30 flex items-center justify-center transition-all cursor-pointer"
                 >
                   <X size={16} />

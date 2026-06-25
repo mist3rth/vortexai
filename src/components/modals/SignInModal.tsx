@@ -42,6 +42,7 @@ export const SignInModal = ({
             {/* Close Button */}
             <button 
               onClick={() => { onClose(); }}
+              aria-label="Fermer"
               className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-rose-500/30 border border-white/10 hover:border-rose-500/50 transition-all cursor-pointer"
             >
               <X size={14} />
