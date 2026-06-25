@@ -49,20 +49,29 @@ export const MobileMenuDrawer = ({
                 <button 
                   onClick={() => {
                     onClose();
-                    onNavigate?.("humanoid-vessels");
+                    onNavigate?.("manifesto-section");
                   }} 
                   className="hover:text-rose-400 hover:translate-x-1 duration-200 transition-all flex items-center gap-2 text-left bg-transparent border-0 cursor-pointer text-white font-bold text-2xl font-sans"
                 >
-                  <span className="text-gray-600 text-sm font-mono tracking-wider font-medium mr-2">01.</span> Votre Humanoïde
+                  <span className="text-gray-600 text-sm font-mono tracking-wider font-medium mr-2">01.</span> Vision
                 </button>
                 <button 
                   onClick={() => {
                     onClose();
-                    onNavigate?.("cognitive-sync");
+                    onNavigate?.("humanoid-vessels");
                   }} 
                   className="hover:text-rose-400 hover:translate-x-1 duration-200 transition-all flex items-center gap-2 text-left bg-transparent border-0 cursor-pointer text-white font-bold text-2xl font-sans"
                 >
-                  <span className="text-gray-600 text-sm font-mono tracking-wider font-medium mr-2">02.</span> Dessiner son Âme
+                  <span className="text-gray-600 text-sm font-mono tracking-wider font-medium mr-2">02.</span> Châssis
+                </button>
+                <button 
+                  onClick={() => {
+                    onClose();
+                    onNavigate?.("personality-matrix");
+                  }} 
+                  className="hover:text-rose-400 hover:translate-x-1 duration-200 transition-all flex items-center gap-2 text-left bg-transparent border-0 cursor-pointer text-white font-bold text-2xl font-sans"
+                >
+                  <span className="text-gray-600 text-sm font-mono tracking-wider font-medium mr-2">03.</span> Psyché
                 </button>
                 <button 
                   onClick={() => {
@@ -71,7 +80,7 @@ export const MobileMenuDrawer = ({
                   }} 
                   className="hover:text-rose-400 hover:translate-x-1 duration-200 transition-all flex items-center gap-2 text-left bg-transparent border-0 cursor-pointer text-white font-bold text-2xl font-sans"
                 >
-                  <span className="text-gray-600 text-sm font-mono tracking-wider font-medium mr-2">03.</span> Liaison Neuronale
+                  <span className="text-gray-600 text-sm font-mono tracking-wider font-medium mr-2">04.</span> Synapse
                 </button>
                 <button 
                   onClick={() => {
@@ -80,7 +89,7 @@ export const MobileMenuDrawer = ({
                   }} 
                   className="hover:text-rose-400 hover:translate-x-1 duration-200 transition-all flex items-center gap-2 text-left bg-transparent border-0 cursor-pointer text-white font-bold text-2xl font-sans"
                 >
-                  <span className="text-gray-600 text-sm font-mono tracking-wider font-medium mr-2">04.</span> Tarifs Membres
+                  <span className="text-gray-600 text-sm font-mono tracking-wider font-medium mr-2">05.</span> Tarifs
                 </button>
               </div>
             </div>
