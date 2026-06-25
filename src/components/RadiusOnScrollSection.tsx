@@ -89,9 +89,13 @@ export function RadiusOnScrollSection() {
                 style={{ animationRange: `exit-crossing ${startPercent}% exit-crossing ${endPercent}%` } as React.CSSProperties}
               >
                 {/* Image de fond */}
-                <div
-                  className={`absolute inset-0 bg-cover ${spec.bgClass} transition-transform duration-700 group-hover:scale-[1.03]`}
-                  style={{ backgroundImage: `url(${spec.img})` }}
+                <img
+                  src={spec.img}
+                  alt={spec.title}
+                  loading="lazy"
+                  width="1280"
+                  height="720"
+                  className={`absolute inset-0 w-full h-full object-cover ${spec.bgClass} transition-transform duration-700 group-hover:scale-[1.03]`}
                 />
                 {/* Dégradé sombre */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/45 to-transparent z-10" />

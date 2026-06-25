@@ -152,9 +152,13 @@ export default function HullShowcase({ onSelectHull }: HullShowcaseProps) {
                   className="group relative h-[360px] sm:h-[420px] md:h-[480px] rounded-[2rem] overflow-hidden border border-white/10 bg-neutral-950 flex flex-col justify-end p-8 sm:p-10 transition-[border-color,box-shadow] duration-300 shadow-[0_15px_35px_rgba(0,0,0,0.5)] hover:border-neutral-700/60 will-change-[transform,opacity]"
                 >
                   {/* HIGH FIDELITY CHASSIS BACKGROUND IMAGE */}
-                  <div
-                    className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105 pointer-events-none"
-                    style={{ backgroundImage: `url(${hull.image})` }}
+                  <img
+                    src={hull.image}
+                    alt={hull.name}
+                    loading="lazy"
+                    width="600"
+                    height="480"
+                    className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-105 pointer-events-none"
                   />
                   
                   {/* Visual glow layer that accentuates individual color */}
