@@ -159,6 +159,7 @@ export default function HullShowcase({ onSelectHull }: HullShowcaseProps) {
                     width="600"
                     height="480"
                     className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-105 pointer-events-none"
+                    style={{ width: "100%", height: "100%" }}
                   />
                   
                   {/* Visual glow layer that accentuates individual color */}
