@@ -73,7 +73,7 @@ export const Header = ({
             <div className="absolute w-2 h-2 rounded-full bg-white shadow-[0_0_8px_#ffffff]" />
           </div>
 
-          <span className="font-sans font-bold text-xl tracking-[0.08em] uppercase flex items-center">
+          <span className="font-sans font-bold text-base md:text-xl tracking-[0.08em] uppercase flex items-center">
             <span className="text-white font-extrabold group-hover:text-neutral-200 transition-colors duration-300">VORTEX</span>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-red-600 font-black relative drop-shadow-[0_2px_4px_rgba(244,63,94,0.3)]">
               AI
