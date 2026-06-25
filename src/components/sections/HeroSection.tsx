@@ -38,7 +38,7 @@ export const HeroSection = ({
                 initial={{ y: "110%" }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.9, cubicBezier: [0.16, 1, 0.3, 1] }}
-                className="text-[64px] sm:text-[80px] md:text-[104px] lg:text-[120px] font-bold tracking-[-0.03em] leading-[0.9] select-text text-white"
+                className="text-[58px] sm:text-[80px] md:text-[104px] lg:text-[120px] font-bold tracking-[-0.03em] leading-[0.9] select-text text-white"
               >
                 <TypingMentalHeader />
               </motion.h1>

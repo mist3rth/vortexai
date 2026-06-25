@@ -289,6 +289,7 @@ export default function App() {
       <MobileMenuDrawer
         isOpen={isMenuOpen}
         onClose={() => setIsMenuOpen(false)}
+        onNavigate={handleNavigate}
       />
 
       {/* Security Sign In Modal */}
