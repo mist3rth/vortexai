@@ -137,6 +137,8 @@ export default function App() {
   }, []);
 
   const handleNavigate = (id: string) => {
+    setIsMenuOpen(false);
+    setIsConnectingOpen(false);
     if (activeView !== "home") {
       setActiveView("home");
       setTimeout(() => {
@@ -177,11 +179,25 @@ export default function App() {
         scrollY={scrollY}
         isSignedIn={isSignedIn}
         userEmail={userEmail}
-        setIsSignModalOpen={setIsSignModalOpen}
-        setIsMenuOpen={setIsMenuOpen}
+        setIsSignModalOpen={(val) => {
+          setIsSignModalOpen(val);
+          if (val) {
+            setIsMenuOpen(false);
+            setIsConnectingOpen(false);
+          }
+        }}
+        setIsMenuOpen={(val) => {
+          setIsMenuOpen(val);
+          if (val) {
+            setIsConnectingOpen(false);
+          }
+        }}
         onNavigate={handleNavigate}
         onGoHome={() => {
           setActiveView("home");
+          setIsMenuOpen(false);
+          setIsConnectingOpen(false);
+          setIsSignModalOpen(false);
           window.scrollTo({ top: 0, behavior: "smooth" });
         }}
       />

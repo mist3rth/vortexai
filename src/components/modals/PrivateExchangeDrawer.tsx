@@ -125,7 +125,7 @@ export const PrivateExchangeDrawer = ({
             </div>
 
             {/* Bottom connect specifications */}
-            <div className="border-t border-white/10 pt-6">
+            <div className="border-t border-white/10 pt-6 space-y-4">
               <div className="grid grid-cols-2 gap-4 text-xs">
                 <div>
                   <span className="text-[10px] font-mono text-gray-500 block uppercase">Adresse de Liaison</span>
@@ -136,6 +136,13 @@ export const PrivateExchangeDrawer = ({
                   <span className="text-white font-medium">&lt; 15 minutes</span>
                 </div>
               </div>
+
+              <button 
+                onClick={onClose}
+                className="w-full py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-bold text-white tracking-wider uppercase transition-all duration-300 text-center justify-center cursor-pointer md:hidden block"
+              >
+                Fermer le canal
+              </button>
             </div>
           </motion.div>
         </motion.div>

@@ -94,7 +94,14 @@ export const MobileMenuDrawer = ({
               </div>
             </div>
 
-            <div />
+            <div className="pt-4 md:hidden block">
+              <button 
+                onClick={onClose}
+                className="w-full py-3 rounded-xl bg-white/5 hover:bg-[#ffffff10] border border-white/10 text-xs font-bold text-white tracking-wider uppercase transition-all duration-300 text-center justify-center cursor-pointer font-sans"
+              >
+                Fermer le menu
+              </button>
+            </div>
           </motion.div>
         </motion.div>
       )}
