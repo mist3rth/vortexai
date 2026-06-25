@@ -140,10 +140,18 @@ export default function App() {
     if (activeView !== "home") {
       setActiveView("home");
       setTimeout(() => {
-        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-      }, 80);
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 350);
     } else {
-      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 300); // Wait for mobile drawer close animation to finish
     }
   };
 

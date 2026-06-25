@@ -64,10 +64,10 @@ export const PrivateExchangeDrawer = ({
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 180 }}
-            className="w-full max-w-[460px] h-full bg-[#060609] border-l border-white/10 p-6 md:p-8 flex flex-col justify-between shadow-[0_0_50px_rgba(6,182,212,0.15)] relative text-left"
+            className="w-full max-w-[460px] h-full bg-[#060609] border-l border-white/10 p-6 md:p-8 flex flex-col justify-between shadow-[0_0_50px_rgba(6,182,212,0.15)] relative text-left overflow-y-auto"
           >
             {/* Header inside connections panel */}
-            <div className="flex flex-col">
+            <div className="flex flex-col flex-1 overflow-y-auto pr-1 scrollbar-none">
               <div className="flex justify-between items-center pb-6 border-b border-white/10">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_8px_#22d3ee]" />
@@ -86,12 +86,12 @@ export const PrivateExchangeDrawer = ({
                    Échangez avec nos experts
                 </h3>
                 <p className="text-xs text-neutral-400 leading-relaxed">
-                  Vous souhaitez des traits de caractère spécifiques, une religion particulière pour votre humanoïde, ou planifier une séance d'intégration ? Échangez en direct avec l'équipe VORTEX.
+                   Vous souhaitez des traits de caractère spécifiques, une religion particulière pour votre humanoïde, ou planifier une séance d'intégration ? Échangez en direct avec l'équipe VORTEX.
                 </p>
               </div>
 
               {/* Simulated AI chat box inside side drawer */}
-              <div className="bg-black/60 border border-white/10 rounded-xl p-4 h-[280px] overflow-y-auto space-y-4 scrollbar-thin flex flex-col justify-end">
+              <div className="bg-black/60 border border-white/10 rounded-xl p-4 h-[160px] sm:h-[280px] overflow-y-auto space-y-4 scrollbar-thin flex flex-col justify-end">
                 <div className="overflow-y-auto space-y-3 pr-1">
                   {chatMessages.map((msg, i) => (
                     <div key={i} className={`flex flex-col ${msg.role === 'user' ? 'items-end' : 'items-start'}`}>
@@ -105,7 +105,7 @@ export const PrivateExchangeDrawer = ({
               </div>
 
               {/* Mini Chat Form */}
-              <div className="mt-3 flex gap-2">
+              <div className="mt-3 flex gap-2 pb-4">
                 <Input
                   type="text"
                   placeholder="Posez vos questions sur les profils, tarifs..."
